@@ -6,27 +6,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="This is how we get ants...">
+        <meta name="author" content="schlerp">
         <meta name="theme-color" content="#ffffff">
         
         <title>{% block title %}Schlerps Blog - This is how we get ants{% endblock %}</title>
         <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
         <link href="{% static "css/blog.css" %}" rel="stylesheet">
         <link href="{% static "css/font.css" %}" rel="stylesheet">
+        <link href="{% static "css/prism.css" %}" rel="stylesheet" />
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <!-- jQuery must be in head :( -->
         <script type="text/javascript" src="{% static "js/jquery-2.1.4.min.js" %}"></script>
         
         <!-- custom block  -->
         {% block custom_head %}
-        
         {% endblock %}
     </head>
     <body>
-        {% block nav %}
-        {% include 'templates/includes/nav.html' %}        
-        {% endblock %}
         <div class="container">
           <div class="row">
               <div class="col-sm-8 blog-main">
@@ -46,31 +43,54 @@
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
               <div class="sidebar-module sidebar-module-inset">
                 <h4>About</h4>
-                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <p>This is a blog about all sorts of things, mostly nothing... but occasionally something.</p
+                <p>I like:</p>
+                <ul>
+                    <li>Linux</li>
+                    <li>Guitars</li>
+                    <li>Python</li>
+                    <li>Bash</li>
+                    <li>SDR</li>
+                    <li>ARM (and other SOC's)</li>
+                    <li>Android</li>
+                    <li>AFL (up the Bombers!)</li>
+                    <li>Mountain Biking</li>
+                    <li>Cooking (and eating!)</li>
+                    <li>Health Informatics</li>
+                    <li>Thinking outside the box</li>
+                </ul>
+                <p>I dislike:</p>
+                <ul>                
+                    <li>Squash (those little yellow vegetables)</li>
+                    <li>CMD.exe</li>
+                    <li>Windows</li>
+                    <li>Microsoft</li>
+                    <li>SAP (BOXI 3.1)</li>
+                    <li>Sharepoint</li>
+                </ul>
               </div>
-              <div class="sidebar-module">
-                <h4>Archives</h4>
-                <ol class="list-unstyled">
-                  <li><a href="#">March 2014</a></li>
-                  <li><a href="#">February 2014</a></li>
-                  <li><a href="#">January 2014</a></li>
-                  <li><a href="#">December 2013</a></li>
-                  <li><a href="#">November 2013</a></li>
-                  <li><a href="#">October 2013</a></li>
-                  <li><a href="#">September 2013</a></li>
-                  <li><a href="#">August 2013</a></li>
-                  <li><a href="#">July 2013</a></li>
-                  <li><a href="#">June 2013</a></li>
-                  <li><a href="#">May 2013</a></li>
-                  <li><a href="#">April 2013</a></li>
-                </ol>
-              </div>
+              <!--<div class="sidebar-module">-->
+                <!--<h4>Archives</h4>-->
+                <!--<ol class="list-unstyled">-->
+                  <!--<li><a href="#">March 2014</a></li>-->
+                  <!--<li><a href="#">February 2014</a></li>-->
+                  <!--<li><a href="#">January 2014</a></li>-->
+                  <!--<li><a href="#">December 2013</a></li>-->
+                  <!--<li><a href="#">November 2013</a></li>-->
+                  <!--<li><a href="#">October 2013</a></li>-->
+                  <!--<li><a href="#">September 2013</a></li>-->
+                  <!--<li><a href="#">August 2013</a></li>-->
+                  <!--<li><a href="#">July 2013</a></li>-->
+                  <!--<li><a href="#">June 2013</a></li>-->
+                  <!--<li><a href="#">May 2013</a></li>-->
+                  <!--<li><a href="#">April 2013</a></li>-->
+                <!--</ol>-->
+              <!--</div>-->
               <div class="sidebar-module">
                 <h4>Elsewhere</h4>
                 <ol class="list-unstyled">
-                  <li><a href="#">GitHub</a></li>
-                  <li><a href="#">Twitter</a></li>
-                  <li><a href="#">Facebook</a></li>
+                  <li><a href="https://github.com/PatrickCoffey/">GitHub</a></li>
+                  <li><a href="http://freenode.net">IRC: schlerp</a></li>
                 </ol>
               </div>
             </div><!-- /.blog-sidebar -->
@@ -86,6 +106,7 @@
         </footer>        
         
         <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/prism.js" %}"></script>
         {% block extra_js %}
         {% endblock %}
     </body>

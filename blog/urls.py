@@ -6,5 +6,5 @@ urlpatterns = patterns('',
     # Index
     url('^$', ListView.as_view(model=Post, 
                                template_name='templates/post_list.html',
-                               paginate_by=5)),
+                               )),
 )

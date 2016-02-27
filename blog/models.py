@@ -7,13 +7,14 @@ from django.utils.text import slugify
 class Post(models.Model):
     """Post - individual post eg. blog entry"""
     title = models.TextField("Post Title", max_length=300)
-    author = models.TextField("Author", max_length=100, default="Schlerp")
+    author = models.TextField("Author", max_length=100, default="schlerp")
     pub_date = models.DateTimeField("Publishing Date", auto_now=True)
     text = models.TextField("Body")
     slug = models.SlugField(max_length=40, null=True)
     
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
     
     def get_absolute_url(self):
         return "/%s/%s/%s/" % (self.pub_date.year, self.pub_date.month, self.slug)
