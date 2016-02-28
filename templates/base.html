@@ -13,9 +13,9 @@
         <title>{% block title %}This is how we get ants...{% endblock %}</title>
         <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
         <link href="{% static "css/blog.css" %}" rel="stylesheet">
-        <link href="{% static "css/font.css" %}" rel="stylesheet">
         <link href="{% static "css/pygments.css" %}" rel="stylesheet">
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
+        <!--<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>-->
+        <link href="{% static "css/font.css" %}" rel="stylesheet">
         <!-- jQuery must be in head :( -->
         <script type="text/javascript" src="{% static "js/jquery-2.1.4.min.js" %}"></script>
         
@@ -31,16 +31,16 @@
                       <div class="alert alert-{{ message.tags }}">{{ message }}</div>
                   {% endfor %}
                   <div class="blog-header">
-                      <h1 class="blog-title">Schlerp's Blog</h1>
-                      <p class="lead blog-description">This is how we get ants...</p>
+                      <h1 class="blog-title">This is how we get ants...</h1>
+                      <p class="lead blog-description">A blog by schlerp about stuff</p>
                   </div>
                   {% block top_content %}{% endblock %}
               </div>
-            <div class="col-sm-9 blog-main">
+            <div class="col-sm-8 blog-main">
             {% block content %}{% endblock %}
             </div><!-- /.blog-main -->
     
-            <div class="col-sm-3 blog-sidebar">
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
               <div class="sidebar-module sidebar-module-inset">
                 <h4>About</h4>
                 <p>This is a blog about all sorts of things, mostly nothing... but occasionally something.</p

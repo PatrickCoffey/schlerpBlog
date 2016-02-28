@@ -87,7 +87,8 @@ STATICFILES_DIRS = (
     os.path.join(os.path.join(BASE_DIR, "static")),
     os.path.join(BASE_DIR, "static", "css"),
     os.path.join(BASE_DIR, "static", "js"),
-    os.path.join(BASE_DIR, "static", "media")
+    os.path.join(BASE_DIR, "static", "media"),
+    os.path.join(BASE_DIR, "static", "fonts")
 )
 
 

@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'FantasqueSansMonoRegular';
+        src: url('/static/fonts/FantasqueSansMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
 
 h1, .h1,
 h2, .h2,
@@ -11,8 +18,13 @@ body {
     font-style: normal;
 } 
 
-/*h1 {*/
-    /*font-family: 'FantasqueSansMonoRegular';*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-/*}*/ 
+pre {
+    font-size: 14px;
+    font-family: 'FantasqueSansMonoRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.no-style {
+    color: black;
+}
