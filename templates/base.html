@@ -20,57 +20,56 @@
     </head>
     <body>
         <div class="container">
-          <div class="row">
-              <div class="col-sm-12 blog-main">
-                  {% for message in messages %}
-                      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-                  {% endfor %}
-                  <div class="blog-header">
-                      <h1 class="blog-title"><a href="/" class="no-style">This is how we get ants...</a></h1>
-                      <p class="lead blog-description">A blog by schlerp about stuff</p>
-                  </div>
-                  {% block top_content %}{% endblock %}
-              </div>
-            <div class="col-sm-8 blog-main">
-            {% block content %}{% endblock %}
-            </div><!-- /.blog-main -->
+            <div class="row">
+                <div class="col-sm-12 blog-main">
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                    <div class="blog-header">
+                        <h1 class="blog-title"><a href="/" class="no-style">This is how we get ants...</a></h1>
+                        <p class="lead blog-description">A blog by schlerp about stuff</p>
+                    </div>
+                    {% block top_content %}{% endblock %}
+                </div>
+                <div class="col-sm-8 blog-main">
+                {% block content %}{% endblock %}
+                </div><!-- /.blog-main -->
     
-            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-              <div class="sidebar-module sidebar-module-inset">
-                <h4>About</h4>
-                <p>This is a blog about all sorts of things, mostly nothing... but occasionally something.</p
-                <p>I like:</p>
-                <ul>
-                    <li>Linux</li>
-                    <li>Guitars</li>
-                    <li>Python</li>
-                    <li>Bash</li>
-                    <li>VB*</li>
-                    <li>SDR</li>
-                    <li>ARM (and other SOC's)</li>
-                    <li>Android</li>
-                    <li>Health Informatics</li>
-                    <li>Thinking outside the box</li>
-                </ul>
-                <p>I dislike:</p>
-                <ul>                
-                    <li>CMD.exe</li>
-                    <li>Windows</li>
-                    <li>Microsoft</li>
-                    <li>SAP (BOXI 3.1)</li>
-                    <li>Sharepoint</li>
-                </ul>
-              </div>
-              <div class="sidebar-module">
-                <h4>Elsewhere</h4>
-                <ol class="list-unstyled">
-                  <li><a href="https://github.com/PatrickCoffey/">GitHub</a></li>
-                  <li><a href="http://freenode.net">IRC: schlerp</a></li>
-                </ol>
-              </div>
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module sidebar-module-inset">
+                        <h4>About</h4>
+                        <p>This is a blog about all sorts of things, mostly nothing... but occasionally something.</p
+                        <p>I like:</p>
+                        <ul>
+                            <li>Linux</li>
+                            <li>Guitars</li>
+                            <li>Python</li>
+                            <li>Bash</li>
+                            <li>VB*</li>
+                            <li>SDR</li>
+                            <li>ARM (and other SOC's)</li>
+                            <li>Android</li>
+                            <li>Health Informatics</li>
+                            <li>Thinking outside the box</li>
+                        </ul>
+                        <p>I dislike:</p>
+                        <ul>                
+                            <li>CMD.exe</li>
+                            <li>Windows</li>
+                            <li>Microsoft</li>
+                            <li>SAP (BOXI 3.1)</li>
+                            <li>Sharepoint</li>
+                        </ul>
+                </div>
+                <div class="sidebar-module">
+                    <h4>Elsewhere</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://github.com/PatrickCoffey/">GitHub</a></li>
+                        <li><a href="http://freenode.net">IRC: schlerp</a></li>
+                    </ol>
+                </div>
             </div><!-- /.blog-sidebar -->
-    
-          </div><!-- /.row -->
+        </div><!-- /.row -->
 
         <footer class="blog-footer">
           <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
