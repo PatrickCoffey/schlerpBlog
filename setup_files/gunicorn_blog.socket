@@ -1,0 +1,10 @@
+[Unit]
+Description=gunicorn socket for schlerpBlog
+
+[Socket]
+ListenStream=/run/gunicorn/socket
+ListenStream=0.0.0.0:8000
+#ListenStream=[::]:8000
+
+[Install]
+WantedBy=sockets.target
