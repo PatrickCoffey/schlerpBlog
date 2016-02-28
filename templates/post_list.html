@@ -5,7 +5,6 @@
     {% block content %}
         {% for post in object_list %}
         <div class="post">  
-            <!--<h1>{{ post.title }}</h1>-->
             <h1>&gt;&gt;&gt; <a class="no-style" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
             <h3>{{ post.pub_date }}</h3>      
             {{ post.text|custom_markdown }}
