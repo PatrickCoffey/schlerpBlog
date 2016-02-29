@@ -3,8 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader, RequestContext
 from blog.models import Post
 
-from .forms import UploadFileForm
-
+from blog.forms import UploadFileForm
+from blog.utils import handle_uploaded_file
 
 # Create your views here.
 
