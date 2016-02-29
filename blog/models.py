@@ -30,3 +30,14 @@ class Comment(models.Model):
     author = models.TextField("Author", max_length=100, default="Anonymous")
     pub_date = models.DateTimeField("Publish Date", auto_now=True)
     post = models.ForeignKey(Post)
+
+
+class Media(models.Model):
+    """This represents a peice of media.. most likely just pictures.."""
+    title = models.TextField("Media Title", max_length=100)
+    upload = models.FileField(upload_to='uploads/')
+    slug = models.SlugField(max_length=50, unique=True, null=True)
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Media, self).save(*args, **kwargs)

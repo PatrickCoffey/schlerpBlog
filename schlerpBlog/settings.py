@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '1!b#m^vd-pmb70y5!ap5^q28zvly#ec+l2g@*)y20edrsdvf&('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #True
+DEBUG = True
 
-TEMPLATE_DEBUG = False #True
+TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['blog.schlerp.net']
+#ALLOWED_HOSTS = ['blog.schlerp.net']
 
 
 # Application definition
@@ -36,7 +36,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_markdown',
     'blog',
 )
 
@@ -91,7 +90,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static", "fonts")
 )
 
-MEDIA_ROOT = (os.path.join(BASE_DIR, "static", "media"),)
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
 # Templates
 TEMPLATE_DIRS = (
