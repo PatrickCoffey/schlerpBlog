@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '1!b#m^vd-pmb70y5!ap5^q28zvly#ec+l2g@*)y20edrsdvf&('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False #True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False #True
 
-#ALLOWED_HOSTS = ['blog.schlerp.net']
+ALLOWED_HOSTS = ['blog.schlerp.net']
 
 
 # Application definition
