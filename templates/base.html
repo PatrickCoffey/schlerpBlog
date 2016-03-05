@@ -32,10 +32,10 @@
                     </div>
                     {% block top_content %}{% endblock %}
                 </div>
-                <div class="col-sm-8 blog-main">
+                <!--<div class="col-sm-8 blog-main">-->
                 {% block content %}{% endblock %}
-                </div><!-- /.blog-main -->
-    
+                <!--</div><!-- /.blog-main -->-->
+                {% block sidebar %}                
                 <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
                     <div class="sidebar-module sidebar-module-inset">
                         <h4>About</h4>
@@ -61,15 +61,16 @@
                             <li>SAP (BOXI 3.1)</li>
                             <li>Sharepoint</li>
                         </ul>
-                </div>
-                <div class="sidebar-module">
-                    <h4>Elsewhere</h4>
-                    <ol class="list-unstyled">
-                        <li><a href="https://github.com/PatrickCoffey/">GitHub</a></li>
-                        <li><a href="http://freenode.net">IRC: schlerp</a></li>
-                    </ol>
-                </div>
-            </div><!-- /.blog-sidebar -->
+                    </div>
+                    <div class="sidebar-module">
+                        <h4>Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="https://github.com/PatrickCoffey/">GitHub</a></li>
+                            <li><a href="http://freenode.net">IRC: schlerp</a></li>
+                        </ol>
+                    </div>
+                </div><!-- /.blog-sidebar -->
+                {% endblock %}
         </div><!-- /.row -->
 
         <footer class="blog-footer">

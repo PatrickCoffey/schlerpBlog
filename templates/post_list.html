@@ -3,6 +3,7 @@
             {% load custom_markdown %}
             
             {% block content %}
+            <div class="col-sm-8 blog-main">
                 {% for post in object_list %}
                 <div class="post">  
                     <h1>&gt;&gt;&gt; <a class="no-style" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
@@ -21,5 +22,5 @@
                         {% endif %}
                     </ul>
                 </nav>
-                
+            </div>
             {% endblock %}
